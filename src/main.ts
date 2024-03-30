@@ -3,6 +3,8 @@ import './style.css'
 import './topics/02-object-interfaces'
 import './topics/03-functions'
 import './topics/04-homework-types'
+import './topics/05-basic-destructuring'
+import './topics/06-function-destructuring'
 
 //import typescriptLogo from './typescript.svg'
 //import viteLogo from '/vite.svg'
