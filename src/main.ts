@@ -1,5 +1,9 @@
 import './style.css'
-// import './topics/01-basic-types'
+// import './topics/01-basic-types'    //Control + Space	*Autorellena el codigo faltante
+import './topics/02-object-interfaces'
+import './topics/03-functions'
+import './topics/04-homework-types'
+
 //import typescriptLogo from './typescript.svg'
 //import viteLogo from '/vite.svg'
 //import { setupCounter } from './counter.ts'
