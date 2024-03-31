@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
     descrition: string,
     price: number
 }
@@ -15,22 +15,23 @@ interface TaxCalculationsOptions {
     products: Product[];
 }
 
-function taxCalculation( options: TaxCalculationsOptions ): number[] {
+// function taxCalculation( options: TaxCalculationsOptions ): [number, number] {
+// function taxCalculation( { tax, products}: TaxCalculationsOptions ): [number, number] {
+export function taxCalculation( options: TaxCalculationsOptions ): [number, number] {
 
+    const { tax, products} = options;
     let total = 0;
 
-    options.products.forEach( product =>{
-        total += product.price;
+    products.forEach( ({price}) =>{
+        total += price;
     });
-    return [total, total * options.tax]
+    return [total, total * tax]
 }
 const shoppingCart = [phone, tablet];
 const tax = 0.15;
-const result = taxCalculation({
+const [total, taxTotal] = taxCalculation({
     products: shoppingCart,
     tax: tax,
 })
-console.log('Total', result[0]);
-console.log('Tax', result[1]);
-
-export {};
+console.log('Total', total);
+console.log('Tax', taxTotal);
