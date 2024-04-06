@@ -1,1 +1,1 @@
-# Angular_App
+# Examples and nomenclature of Typescript
